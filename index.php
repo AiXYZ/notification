@@ -37,8 +37,8 @@ if(isset($_GET['message'])) {
     $notification = [
         'title' => $title, 
         'body' => $body, 
-        '_displayInForeground' => true,
         'sound' => 'default',
+        'data'=> json_encode(array('someData' => 'goes here'))
     ];
 
     // Notify an interest with a notification
